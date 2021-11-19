@@ -1,0 +1,49 @@
+
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <div class="login">
+      <div nz-row >
+        <div nz-col nzSpan="24">
+        <h1><span clas> Registro</span></h1>
+        </div>
+      </div>
+      <div nz-row>
+        <div nz-col nzSpan="24">
+          <form nz-form class="login-form" [formGroup]="validateFormRegister" (ngSubmit)="submitForm()">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Intorduce un email válido">
+                <nz-input-group nzPrefixIcon="user">
+                  <input formControlName="email" nz-input placeholder="Email" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Introduce una contraeña válida">
+                <nz-input-group nzPrefixIcon="lock">
+                  <input formControlName="password" nz-input placeholder="Password" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Introduce una contraseña válida">
+                <nz-input-group nzPrefixIcon="lock">
+                  <input formControlName="rePassword" nz-input placeholder="Password" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+
+            <div nz-row class="login-form-margin">
+
+            </div>
+            <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
+            <a routerLink="/login">Login</a>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

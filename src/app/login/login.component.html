@@ -1,0 +1,32 @@
+
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <div class="login">
+      <h1><span clas> Login</span></h1>
+      <form nz-form class="login-form" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your username!">
+
+              <input formControlName="email" nz-input placeholder="Email" />
+
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your Password!">
+
+              <input formControlName="password" nz-input placeholder="Password" />
+
+          </nz-form-control>
+        </nz-form-item>
+
+        <div nz-row class="login-form-margin">
+
+        </div>
+        <button nz-button class="login-form-button login-form-margin">Log in</button>
+        <a routerLink="/register">Registro</a>
+
+      </form>
+    </div>
+  </div>
+
+</div>

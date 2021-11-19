@@ -1,0 +1,27 @@
+
+
+  <div nz-row [nzGutter]="24">
+
+    <div nz-col [nzXXl]="8" [nzXl]="6" [nzLg]="6" [nzMd]="6" [nzSm]="12" [nzXs]="24" *ngFor="let modelo of modeloCalzado">
+
+        <nz-card style="width:250px;" [nzCover]="coverTemplate" [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+          <nz-card-meta nzTitle="{{modelo?.modelo}}" nzDescription="Tallas: {{modelo?.tallas}}" [nzAvatar]="avatarTemplate"></nz-card-meta>
+        </nz-card>
+        <ng-template #avatarTemplate>
+          <nz-avatar nzSrc="{{modelo?.imageFull}}"></nz-avatar>
+        </ng-template>
+        <ng-template #coverTemplate>
+          <img alt="example" src="{{modelo?.imageFull}}" />
+        </ng-template>
+        <ng-template #actionSetting>
+          <i nz-icon nzType="setting"></i>
+        </ng-template>
+        <ng-template #actionEdit>
+          <i nz-icon nzType="edit"></i>
+        </ng-template>
+        <ng-template #actionEllipsis>
+          <span>{{modelo.precioSugerido| precios | currency}}</span>
+        </ng-template>
+
+    </div>
+  </div>
